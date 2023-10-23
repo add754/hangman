@@ -32,7 +32,8 @@ File Structure
 ------
     .
     ├── hangman              # The hangman game
-        └──hangman_Template  # The file containing the code for the game
+        ├──milestone_2       # Code for milestone 2
+        └──hangman_Template  # File containing the template code for the game
 
 Licensing
 ------
