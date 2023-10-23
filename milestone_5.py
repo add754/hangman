@@ -11,7 +11,7 @@ class Hangman:
     word_list: list
         List of words to be used in the game
     num_lives: int
-        Number of lives the player has
+        Number of lives the player has. This defaults to 5.
     
     Attributes:
     ----------
@@ -47,7 +47,7 @@ class Hangman:
         self.num_lives = num_lives
         self.list_of_guesses = []
 
-    def __check_guess(self, guess: str) -> bool:
+    def __check_guess(self, guess: str):
         '''
         Checks if the letter is in the word.
         If it is, it replaces the '_' in the word_guessed list with the letter.
@@ -88,13 +88,18 @@ class Hangman:
                 self.list_of_guesses.append(guess)
                 break
 
-
     @staticmethod
-    def play_game(word_list: list):
+    def play_game(word_list: list, num_lives: int = 5):
         '''
         Begins game play - including creating a new instance of the game.
+
+        Parameters:
+        ----------
+        word_list: list
+            List of words to be used in the game
+        num_lives: int
+            Number of lives the player has. This defaults to 5.
         '''
-        num_lives = 5
         game = Hangman(word_list, num_lives)
 
         while True:
@@ -106,6 +111,6 @@ class Hangman:
             print('Congratulations. You won the game!')
             break
         
-
-
-Hangman.play_game(['apple', 'banana', 'grapes', 'mango', 'strawberry'])
+if __name__ == '__main__':
+    word_list = ['apple', 'banana', 'grapes', 'mango', 'strawberry']
+    Hangman.play_game(word_list)
