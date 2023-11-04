@@ -91,8 +91,6 @@ class Hangman:
                 self.list_of_guesses.append(guess)
                 break
 
-
-    @staticmethod
     def play_game(word_list: list, num_lives: int = 5):
         '''
         Begins game play - including creating a new instance of the game.
