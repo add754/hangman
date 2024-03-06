@@ -106,17 +106,20 @@ class Hangman:
         
         while True:
             difficulty = input('What difficulty would you like to play?\n select by typing either "easy", "medium" or "hard".\n \
-                Alternatively, submit "custom" to use the custom number of lives you have previously submitted.')
+                Alternatively, submit "custom" to use the custom number of lives and words you have previously submitted.')
             if difficulty == 'custom':
                 break
             elif difficulty == 'easy':
                 self.num_lives = 8
+                self.word_list = ['help', 'eye', 'see', 'yes', 'dot']
                 break
             elif difficulty == 'medium':
                 self.num_lives = 3
+                self.word_list = ['complex', 'seaside', 'medium', 'terrific', 'desperate']
                 break
             elif difficulty == 'hard':
                 self.num_lives = 1
+                self.word_list = ['onomatopoeia', 'conciliate', 'anachronism', 'worcestershire', 'accismus']
                 break
             else:
                 print('Invalid response, please try again.')
