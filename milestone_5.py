@@ -103,6 +103,24 @@ class Hangman:
             Number of lives the player has. This defaults to 5.
         '''
         print('Welcome to Handgman!\nEnjoy the game!\n')
+        
+        while True:
+            difficulty = input('What difficulty would you like to play?\n select by typing either "easy", "medium" or "hard".\n \
+                Alternatively, submit "custom" to use the custom number of lives you have previously submitted.')
+            if difficulty == 'custom':
+                break
+            elif difficulty == 'easy':
+                self.num_lives = 8
+                break
+            elif difficulty == 'medium':
+                self.num_lives = 3
+                break
+            elif difficulty == 'hard':
+                self.num_lives = 1
+                break
+            else:
+                print('Invalid response, please try again.')
+
         game = Hangman(word_list, num_lives)
         while True:
             if game.num_lives == 0:
